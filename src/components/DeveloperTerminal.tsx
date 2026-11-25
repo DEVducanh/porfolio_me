@@ -30,7 +30,7 @@ export function DeveloperTerminal() {
           <span className="terminal-language">TS</span>
         </div>
         <div className="terminal-code">
-          <div className="terminal-comment">// a little about me</div>
+          <div className="terminal-comment">{"// a little about me"}</div>
           {codeLines.map((line, index) => (
             <motion.div
               className="terminal-line"
