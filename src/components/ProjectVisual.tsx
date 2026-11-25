@@ -1,9 +1,30 @@
+import Image from "next/image";
+
 type Props = { type: string; accent: string };
 
 export function ProjectVisual({ type, accent }: Props) {
+  const screenshot = type === "nft-auction"
+    ? { src: "/images/bitbid-farcaster.png", alt: "BitBid NFT auction mini app inside Farcaster" }
+    : type === "cms-game"
+      ? { src: "/images/game-management-cms.png", alt: "Game Management CMS submission detail screen" }
+      : type === "corporate-site"
+        ? { src: "/images/onechain-homepage.png", alt: "Screenshot of the OneChain corporate website" }
+        : null;
+
   return (
-    <div className={`project-visual ${type} ${accent}`} aria-hidden="true">
-      <span className="visual-note">UI illustration</span>
+    <div className={`project-visual ${type} ${accent}`} aria-hidden={!screenshot}>
+      {!screenshot && <span className="visual-note">UI illustration</span>}
+      {screenshot && (
+        <div className="project-screenshot-frame">
+          <Image
+            src={screenshot.src}
+            alt={screenshot.alt}
+            fill
+            sizes="(max-width: 680px) 78vw, 34vw"
+            className="project-screenshot-image"
+          />
+        </div>
+      )}
       {type === "dashboard" && (
         <div className="mock-window">
           <div className="mock-sidebar"><i /><i /><i /><i /><i /></div>

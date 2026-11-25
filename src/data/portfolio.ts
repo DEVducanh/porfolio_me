@@ -13,41 +13,6 @@ export const profile = {
   certificates: "3",
 };
 
-export const strengths = [
-  {
-    number: "01",
-    title: "Frontend development",
-    description:
-      "Developed administrative interfaces and web application features using React.js, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
-    tags: ["React.js", "Next.js", "TypeScript"],
-    icon: "✳",
-  },
-  {
-    number: "02",
-    title: "Backend & APIs",
-    description:
-      "Designed and developed RESTful APIs with Node.js and NestJS for game data and account management.",
-    tags: ["Node.js", "NestJS", "REST APIs"],
-    icon: "⌘",
-  },
-  {
-    number: "03",
-    title: "Data & state management",
-    description:
-      "Worked with MongoDB and PostgreSQL, and used Redux Toolkit and React Query for state management and data fetching.",
-    tags: ["MongoDB", "Redux Toolkit", "React Query"],
-    icon: "◈",
-  },
-  {
-    number: "04",
-    title: "Maintenance & deployment",
-    description:
-      "Maintained web applications, investigated bugs, implemented fixes, and used Docker, Git, GitHub, and Linux workflows.",
-    tags: ["Docker", "GitHub", "Linux"],
-    icon: "↗",
-  },
-];
-
 export const skillGroups = [
   { title: "Frontend", skills: ["React.js", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "shadcn/ui", "React Hooks"] },
   { title: "State & data fetching", skills: ["Redux Toolkit", "React Query", "Zustand", "Context API"] },
@@ -58,18 +23,33 @@ export const skillGroups = [
 export const projects = [
   {
     number: "01",
-    category: "Professional experience · Onechain Technology JSC",
-    title: "Game Management CMS — Utopia Platform",
+    featured: true,
+    category: "Farcaster Mini App · NFT Auction",
+    title: "BitBid — NFT Auction App",
     description:
-      "Developed administrative interfaces and features using React.js, TypeScript, Tailwind CSS, and shadcn/ui. Also designed and developed RESTful APIs with Node.js and NestJS for game data and account management, using MongoDB and PostgreSQL.",
-    stack: ["React.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Node.js", "NestJS", "MongoDB", "PostgreSQL"],
-    link: "#experience",
-    linkLabel: "See experience",
-    visual: "dashboard",
-    accent: "mint",
+      "An NFT auction web app for Farcaster with real-time bidding, price tracking, and activity updates. Blockchain-based verification supports NFT authenticity in a simple experience for new and experienced collectors.",
+    stack: [],
+    link: "#contact",
+    linkLabel: "Discuss this project",
+    visual: "nft-auction",
+    accent: "violet",
   },
   {
     number: "02",
+    featured: false,
+    category: "Professional experience · Onechain Technology JSC",
+    title: "Game Management CMS — Utopia Platform",
+    description:
+      "Built Utopia Platform admin features with React.js, TypeScript, Tailwind CSS, and shadcn/ui. Developed Node.js and NestJS APIs for game and account data backed by MongoDB and PostgreSQL.",
+    stack: ["React.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Node.js", "NestJS", "MongoDB", "PostgreSQL"],
+    link: "#experience",
+    linkLabel: "See experience",
+    visual: "cms-game",
+    accent: "mint",
+  },
+  {
+    number: "03",
+    featured: false,
     category: "Professional experience · Corporate website",
     title: "Corporate Website — onechain.tech",
     description:
@@ -77,11 +57,12 @@ export const projects = [
     stack: ["Next.js", "TypeScript", "Swagger", "Redux Toolkit", "React Query"],
     link: "https://onechain.tech",
     linkLabel: "Visit website",
-    visual: "code",
+    visual: "corporate-site",
     accent: "blue",
   },
   {
-    number: "03",
+    number: "04",
+    featured: false,
     category: "Graduation project · FPT Polytechnic College",
     title: "QR Code Food Ordering System",
     description:

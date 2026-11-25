@@ -20,4 +20,4 @@ src/
 └── data/                # Profile, skills, strengths, and project content
 ```
 
-Update profile and CV content in `src/data/portfolio.ts`. The project preview illustrations are CSS artwork, not screenshots of the real products; replace them with approved project images if available. The inquiry form opens the visitor's email app with the message prefilled.
+Update profile and CV content in `src/data/portfolio.ts`. The project list is paginated with animated transitions. The BitBid Farcaster app, OneChain corporate site, and Game Management CMS use supplied screenshots from `public/images/`; the QR ordering project preview is a CSS illustration. The inquiry form opens the visitor's email app with the message prefilled.
